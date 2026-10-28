@@ -32,9 +32,14 @@ and a personal one, and the work computer may have policies about personal accou
   override keeps things working where no keychain exists (CI, a headless server).
 - Environment variables may be loaded from a gitignored `.env` as a fallback. `.env` is
   in `.gitignore`, and the repo contains only `.env.example` with placeholders.
-- Personal tokens (Notion, GitHub, TickTick, Calendar) are **not stored on the work
-  computer** unless Samuel has confirmed that his employer's policy allows it. The
-  keychain protects against leaks in the repo, not against workplace policy.
+- Personal tokens (Notion, GitHub, TickTick, Calendar) may be used on the work computer,
+  at Samuel's discretion, with these guardrails:
+  - least privilege: the smallest scopes that work, read-only first;
+  - every token is revocable and revoked when the work computer is returned or
+    replaced;
+  - nothing is stored in the work computer's shared or synced locations.
+  The keychain protects against leaks in the repo, not against the employer's IT
+  monitoring or policies; those remain Samuel's responsibility.
 - If a secret is ever committed by mistake, treat it as leaked: revoke it first, then
   clean up the history.
 
@@ -46,11 +51,10 @@ and a personal one, and the work computer may have policies about personal accou
   which becomes part of the skeleton in #4.
 - On Linux Mint the keyring daemon must be running (it is by default on Cinnamon); to
   be checked when setting up the personal machine.
-- Features that need personal tokens (Phases 4–5) are developed and run on the
-  personal machine unless the work-computer rule is relaxed.
+- Features that need personal tokens (Phases 4–5) can be developed on either machine.
 - Revisit a cloud secrets manager if Argos ever runs on a server or is shared.
 
 ## To confirm
 
-Samuel to confirm the keychain choice and the work-computer rule before this moves to
-**Accepted**.
+Samuel to confirm the keychain choice. The work-computer rule was relaxed to
+guardrails after Samuel said the rule was stricter than needed.
