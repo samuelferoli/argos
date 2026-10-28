@@ -74,7 +74,47 @@ Work is tracked in [issues](https://github.com/samuelferoli/argos/issues) and on
 
 ## Getting started
 
-Coming with the project skeleton (#4).
+Argos is a Python project managed with [uv](https://docs.astral.sh/uv/), which also
+installs the right Python version for you.
+
+**1. Install uv**
+
+- Windows (PowerShell): `winget install --id astral-sh.uv` (or see the uv docs)
+- Linux Mint: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+
+**2. Get the code and install dependencies**
+
+```
+git clone https://github.com/samuelferoli/argos.git
+cd argos
+uv sync
+```
+
+**3. Run it**
+
+```
+uv run argos
+```
+
+**Secrets** (such as the LLM API key) live in your OS keychain, not in files:
+
+```
+uv run argos secrets set LLM_API_KEY
+uv run argos secrets status
+```
+
+On Linux Mint this uses the system keyring (GNOME Keyring), which is normally running by
+default on the desktop. Non-secret settings can go in a `.env` file; copy `.env.example`.
+
+**Development**
+
+```
+uv run pytest        # tests
+uv run ruff check .  # lint
+uv run ruff format . # format
+```
+
+The setup has been run on Windows; the Linux Mint steps have not been tested yet.
 
 ## Docs
 
