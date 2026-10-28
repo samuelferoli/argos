@@ -119,4 +119,4 @@ The setup has been run on Windows; the Linux Mint steps have not been tested yet
 ## Docs
 
 - [Decision records](docs/decisions/README.md)
-- Learning notes — coming soon (#6)
+- Learning notes: [00. LLM API basics](docs/learning/00-llm-basics.md)
