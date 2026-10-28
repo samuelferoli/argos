@@ -45,8 +45,8 @@ names live in configuration, not in the code.
 - Prompts leave the machine, but Groq's docs say inference data is not retained by
   default. With ZDR on, reliability and abuse logs are not kept either.
 - Tool calling is available, which Phase 3 needs.
-- Limits from Groq's rate-limits page (2026-10-28), identical for the models Argos can
-  use:
+- Free Plan limits from Groq's rate-limits page (2026-10-28), identical for the models
+  Argos can use:
 
   | Model | Req/min | Req/day | Tokens/min | Tokens/day |
   |---|---|---|---|---|
@@ -55,6 +55,10 @@ names live in configuration, not in the code.
   | `qwen/qwen3.8-27b` | 30 | 1K | 8K | 200K |
 
   Switching between these models does not buy more headroom.
+- The paid Developer plan lists much higher limits for the same models (1K req/min,
+  500K req/day, 250K tokens/min, no daily token limit shown). It is not part of this
+  decision because Argos must cost nothing; its prices were not checked. It is a known
+  way out if the free limits ever block the project.
 - The limits are tight, especially tokens per minute. Prompts and history must stay
   small, and the code must handle rate-limit errors (HTTP 429) with a clear message and
   a retry.
@@ -63,8 +67,8 @@ names live in configuration, not in the code.
 
 ## To verify (tracked in #5)
 
-- That the numbers above are the *Free Plan* ones: the page has Free and Developer tabs
-  with a shared note, so confirm them on the limits page in the account settings.
+- That the account's own limits page matches the Free Plan numbers above. The public
+  page is a summary and says exceptions exist.
 - That ZDR is enabled on the account.
 - That the Services Agreement bars training on inputs; only a third-party quote of it
   was found.
