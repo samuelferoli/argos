@@ -10,6 +10,6 @@ supersedes the old one.
 | [001](001-hosted-free-llm-api.md) | Hosted free LLM API instead of a local model | Accepted |
 | [002](002-hand-written-agent-loop.md) | Hand-written agent loop, no framework | Accepted |
 | [003](003-workflow-mode-c.md) | Workflow mode C: Claude does plumbing, Samuel codes the AI parts | Accepted |
-| [004](004-secrets-policy.md) | Secrets policy | Proposed |
+| [004](004-secrets-policy.md) | Secrets policy | Accepted |
 
 Statuses: **Proposed** (written, waiting for a yes), **Accepted**, **Superseded by NNN**.

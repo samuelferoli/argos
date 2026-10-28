@@ -1,6 +1,6 @@
 # 004. Secrets policy
 
-- **Status:** Proposed
+- **Status:** Accepted
 - **Date:** 2026-10-28
 - **Issue:** #2
 
@@ -53,8 +53,3 @@ and a personal one, and the work computer may have policies about personal accou
   be checked when setting up the personal machine.
 - Features that need personal tokens (Phases 4–5) can be developed on either machine.
 - Revisit a cloud secrets manager if Argos ever runs on a server or is shared.
-
-## To confirm
-
-Samuel to confirm the keychain choice. The work-computer rule was relaxed to
-guardrails after Samuel said the rule was stricter than needed.
