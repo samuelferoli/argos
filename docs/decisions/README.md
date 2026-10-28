@@ -11,5 +11,6 @@ supersedes the old one.
 | [002](002-hand-written-agent-loop.md) | Hand-written agent loop, no framework | Accepted |
 | [003](003-workflow-mode-c.md) | Workflow mode C: Claude does plumbing, Samuel codes the AI parts | Accepted |
 | [004](004-secrets-policy.md) | Secrets policy | Accepted |
+| [005](005-llm-provider-groq.md) | LLM provider: Groq (free tier) | Accepted |
 
 Statuses: **Proposed** (written, waiting for a yes), **Accepted**, **Superseded by NNN**.
