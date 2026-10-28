@@ -78,5 +78,5 @@ Coming with the project skeleton (#4).
 
 ## Docs
 
-- Decision records — coming soon (#2)
+- [Decision records](docs/decisions/README.md)
 - Learning notes — coming soon (#6)
